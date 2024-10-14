@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collagues</title>
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:   rgb(252, 252, 241);
+         
+        }
+
+        /* Styling untuk header */
+        .header {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffdb58;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: fit-content;
+            
+        }
+
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #ff0000;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #333;
+        }
+        /* styling slider */
+        
+.slider{
+    height: fit-content;
+    width: 600px;
+margin: auto;
+    overflow: hidden;
+    border: 3px solid black;
+    border-radius: 3px;
+    
+}
+.wrap{
+
+    display: flex;
+    animation: slide 15s infinite;
+}
+.wrap img{
+     width: 100%;
+    
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-100%);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    40%{
+        transform: translateX(-200%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    80%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@media screen and (max-width:800px){
+    .slider{
+        width: 400px   ;
+      
+    }
+}
+
+
+        /* Styling untuk hamburger menu */
+        .menu-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .menu-btn div {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 0;
+        }
+
+        /* Styling untuk pilihan universitas */
+        .universities {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            /* background-color: rgb(240, 239, 239); */
+            background-color:white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+
+        .universities div {
+            text-align: center;
+        }
+
+        .universities img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .universities p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Styling untuk grid gambar */
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .images-grid div {
+            background-color: #e0f7fa;
+            height: 150px;
+          
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu" id="menu">
+            <a href="#univ-luar-negeri">Univ. Luar Negeri</a>
+            <a href="#univ-dalam-negeri">Univ. Dalam Negeri</a>
+        </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+   <!-- image slider
+   <img src="gambar1.jpeg" alt="Tips Menghadapi Pertanyaan"  width="550px" height="200px"> -->
+       
+        <div class="slider">   
+                <div class="wrap">
+                  <img src="gambar1.jpeg" alt="">
+                  <img src="gambar2.jpeg" alt="">
+                  <img src="gambar3.jpeg" alt="">
+     
+                </div>
+        </div>
+ 
+      
+        <h1>Tips Menghadapi Pertanyaan "Mau Masuk Kampus Mana?"</h1> 
+    </div>
+
+
+    <div class="universities" id="universities">
+        <div id="univ-luar-negeri">
+            <img src="luarnegeri.jpeg" alt="Univ Luar Negeri">
+            <p>Univ. Luar Negeri</p>
+        </div>
+        <div id="univ-dalam-negeri">
+            <img src="dalamnegeri.jpeg" alt="Univ Dalam Negeri">
+            <p>Univ. Dalam Negeri</p>
+        </div>
+    </div>
+
+    <div class="images-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        }
+    </script>
+
+</body>
+</html>
